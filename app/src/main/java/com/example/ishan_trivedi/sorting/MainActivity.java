@@ -29,14 +29,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(null);
         String a= editText.getText().toString();
         int x=Integer.parseInt(a);
-        if(x!=0) {
-            n.add(x);
-            i++;
-            str.append(a);
-            str.append("  ");
-            textView.setText("Your Numbers are \n" + str);
-            editText.setText(null);
-        }
+        n.add(x);
+        i++;
+        str.append(a);
+        str.append("  ");
+        textView.setText("Your Numbers are \n" + str);
+        editText.setText(null);
     }
 
     public void  BubbleSort(View view)

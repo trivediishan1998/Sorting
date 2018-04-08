@@ -21,35 +21,32 @@ public class SelSort extends AppCompatActivity {
         {
             arr[x] = n.get(x);
         }
-        int swp=0;
-        int cmp = 0;
-        int cnt;
+        int temp,index;
+        int cmp=0,swp=0;
         for (int i = 0; i < arr.length - 1; i++)
         {
-            int index = i;
-            cnt=0;
-            for (int j = i + 1; j < arr.length; j++){
+            index = i;
+            for (int j = i + 1; j < arr.length; j++) {
                 cmp++;
                 if (arr[j] < arr[index]){
                     index = j;
-                    cnt++;
                 }
             }
-            if(cnt==0)
+            if(index!=i)
             {
-                break;
+                swp++;
             }
-            int smallerNumber = arr[index];
+            temp = arr[index];
             arr[index] = arr[i];
-            arr[i] = smallerNumber;
-            swp++;
+            arr[i] = temp;
             textView.append("Pass "+(i+1)+"\n");
-            for (int k = 0; k < arr.length; k++) {
-                textView.append(arr[k]+"  ");
+            for(int k=0;k<arr.length;k++)
+            {
+                textView.append(arr[k]+"\t");
             }
             textView.append("\n");
         }
-        textView.append("Total Comparisions : "+cmp+"\n");
+        textView.append("\nTotal Comparisions : "+cmp+"\n");
         textView.append("Total Swaps : "+swp);
     }
 }
