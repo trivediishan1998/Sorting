@@ -46,7 +46,8 @@ public class SelSort extends AppCompatActivity {
             }
             textView.append("\n");
         }
-        textView.append("\nTotal Comparisions : "+cmp+"\n");
+        textView.append("\nTotal Comparisions : "+cmp);
+        textView.append("\n");
         textView.append("Total Swaps : "+swp);
     }
 }

@@ -48,7 +48,8 @@ public class BubSort extends AppCompatActivity {
             }
             textView.append("\n");
         }
-        textView.append("Total Comparisions : "+cmp+"\n");
+        textView.append("Total Comparisions : "+cmp);
+        textView.append("\n");
         textView.append("Total Swaps : "+swp);
     }
 }
